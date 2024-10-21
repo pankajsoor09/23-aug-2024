@@ -1,0 +1,42 @@
+java 8 features:
+ 
+ 1.static and default implemented methods in interface
+ 
+  interface MyInterface{
+  default void show(){// need to add default keyword explicitly or static
+   }
+   static void display(){
+        }
+       void print();// error 
+  }
+  
+  
+  2. functional interface : the interface which is having exactly one abstract method (one abstract interface)
+                            It can have any no of static implemented method and any no of default implemented methods 
+  @FunctionalInterface (gives error if rules are not followed)
+  
+   
+  
+  3. Lambda Expression (only used in functional interface): is used to provide implementation to functional interfaces
+                          It is providing functional way of implementing  functional interfaces
+                          
+                          will be treated as function by the java compiler so if we are using Lambda Expression to implement functional interfaces   additional .class file will not be created
+                          
+                          () -> {}
+                          
+                          
+         java.util.function package    java predefined Functional Interface(inbuilt)
+         consumer  interface //accept vale but not return it
+         predicate interface(return boolean)test 1arg 
+         supplier // dont accept value but returns// get 
+         Function // apply// need //argument and return type needed
+         
+         java 8 stream / streaming api / java.util.stream
+         .does not store elements
+         .stream is functional in nature // no extra .class is created/not modify its source
+         .lazy and evaluate code only when required
+         .The elements of a stream are only visited once during the life of a stream
+         *stream can be used to filter ,collect print and convert 
+         .Stream <T> filter()
+         
+         forEach() method to iterate collection

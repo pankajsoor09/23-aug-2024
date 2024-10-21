@@ -1,0 +1,16 @@
+1.Write a java program that merges  two list of integer into a single list . Ensure that the final list contains all the elements from both the list 
+without duplicates . Use appropriate  collection interfaces to achieve this
+
+2.create a class student with properties like name and marks . write a java program that stores a list of students  object in an  ArrayList .
+ sort the list based on student marks in ascending order and display the  sorted list
+NOte : use sort() of collection class
+
+3.Implement vector class for this problem 
+Create an Employee class will have details like EmployeeNo,EmployeeName and Address . You should pass value for EmployeeNo, EmployeeName and Address
+through constructor.
+Create a method addInput() which will add employee details to vector.
+create method dispaly() which should display all data from vector using Enumeration .
+
+
+
+Note addInput() and display() should not be member function of Employee class.

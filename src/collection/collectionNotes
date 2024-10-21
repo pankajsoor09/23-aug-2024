@@ -1,0 +1,109 @@
+  Collection : is a framework it has many interface collection is a interface also from java.lang
+
+java 5 features 
+1.covariant return type
+2.Auto Boxing and Auto Unboxing
+3.Collection : Generics : To create type safe collection
+4.Enhanced for loop
+5.Enum : used to declare set of constant
+6. var - args : variable arguments to method
+7.Static import : used to import static properties of class
+8.Annotation//package// : @ used as meta-data (data about data)//provide extra data about class method etc..(for compiler or runtime environment/ or for both)
+
+Java in-built annotation:
+1)@override : this is method level annotation //for compiler
+2)@superWarning("Warning type") : all level annotation
+3)@Depricated : to deprecate class ,method,constructor , data member// it is better not to use it .it might be removed in newer version
+
+class Demo{
+private String msg;
+ public static void show(){
+ }
+ }
+ import static Demo.show;
+ import static Demo*; // all will be imported but not private
+ class Test {
+ psvm(){
+            //Demo.show();
+           show();
+            msg="Hello";//error
+
+type... 
+       void add(int a,int b int... c){// var args must be the last arguments .//in string it will concat
+       // only one var agrs can be added in one method// type does not matter // int a,int b float... c)
+       }
+       add(10,20,30,40,40)//array size depend on add method
+
+
+enum Season{ //Season is identifier // enum is reference data type
+   SUMMER,WINTER,RAINY,SPRING;       // internally 4 objects are created // 
+   Season(){ default private // in constructor// only have private constructor
+      }
+   }
+   
+   Enum class : java.lang
+   By default: set of constants in Enum are public static final
+   by default constructor in the enum are private
+   for every constant internally enum object is created// can not create object explicitly
+   every enum is getting inherited by Enum class
+   
+   
+Array and List
+int [] arr ={10,20,30,40}
+for(int a : arr){
+syop(a);}
+String [] arr1 = {"hello","Hi","NO"};
+for(String s : arr1){
+sop(s);} 
+
+
+<Type>
+
+ArrayList <String>list = new ArrayList<String>(); // list string
+list.add("Hello");
+list.add(10); // error only string object can be stored in it
+
+
+In vector class : elements() to get Enumeration object // in vector class only
+Enumeration <I> : java.util : Legacy interface : Thread safe
+Methods
+public Boolean hasMoreElements()
+public Object nextElemnt()//to get element from vector
+
+Iterator <I> : java.util can be used in any type of collection
+public boolean hasNext()
+public Object next()
+public void remove ()
+
+Comparable <I> : java.lang// it is not marker interface 
+1.public int  compareTo(object)//need same class
+
+comparable <Product>
+public int comparable (product)//no downcast generic
+
+Comparator <I> : java .util // not marker interface
+1.public int compare (object o1 object o2) // need different class 
+
+Comparator <Product>
+public int compare(Product o1 , product o2)
+
+Map<I> it is a interface   key value storage java.util
+                           key are unique : if you insert duplicate key it will replace old value with new value.
+                           value can be  duplicate
+                           
+                             Map<I>
+                               |
+             _______________________________________
+             |                 |                 |
+           HashMap        Hashtable         SortedMap<I>                
+             |                                    |
+     LinkedHashMap                            TreeMap
+     
+     HashMap - Random collection of key-value -- null key and value is allowed
+ LinkedHashMap - ordered collection of key value (Insertion order) -- null is allowed
+ 
+ Hashtable - Random collection of key value -- Legacy class : Thread safe -- null is not allowed(null pointer exception)
+ 
+ TreeMap -sorted collection of key-values (Sorted on the basis of key)- because key are unique -- null is not allowed--null can be value but not key
+                           
+  

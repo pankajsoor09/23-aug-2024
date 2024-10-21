@@ -1,0 +1,78 @@
+class assignment : Implement a mini library management system using collection.
+Create a Book class with attributes title, author, ISBN and isAvailable.
+Create a Library Class that uses a list to manage a collection of books.
+Implement methods to addBook(Book book) ,removeBook (String ISBN),searchBook(String title),
+lendBook(String ISBN), and displayAll().
+In the main method , create a Library object and perform various operations like adding, removing ,searching,
+and lending books.
+
+Assignment 1 : Java Inheritance and Polymorphism
+Objective: Implement a simple hierarchy of animals.
+Create a base class Animal with a method makeSound().
+Create subclasses Dog, Cat, and Cow that inherit from Animal and override the makeSound() method to print an appropriate sound.
+In the main method, create an array of Animal objects that includes a Dog, Cat, and Cow, and use a loop to call makeSound() on each object.
+
+
+Assignment 2 : Implement a simple payment processing system using interfaces.
+Create an interface PaymentProcessor with methods processPayment(double amount) and refundPayment(double amount).
+Implement this interface in classes CreditCardProcessor and PayPalProcessor.
+Write a main method to simulate a payment process using both processors, displaying messages for processing and refunding payments.
+
+
+Assignment 3 : Serialize and deserialize a Java object.
+Create a class Person with attributes name, age, and address.
+Implement the Serializable interface in the Person class.
+Write a Java program to serialize an instance of Person to a file.
+Write another program to deserialize the Person object from the file and display its contents.
+
+
+
+
+
+
+
+
+
+
+
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+// Program to serialize a Person object
+public class SerializePerson {
+    public static void main(String[] args) {
+        // Create an instance of Person
+        Person person = new Person("John Doe", 30, "123 Main St, Springfield");
+
+        // Serialize the Person object to a file
+        try (FileOutputStream fileOut = new FileOutputStream("person.ser");
+             ObjectOutputStream out = new ObjectOutputStream(fileOut)) {
+            out.writeObject(person);
+            System.out.println("Person object has been serialized to person.ser");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+// Program to deserialize a Person object
+public class DeserializePerson {
+    public static void main(String[] args) {
+        // Deserialize the Person object from the file
+        try (FileInputStream fileIn = new FileInputStream("person.ser");
+             ObjectInputStream in = new ObjectInputStream(fileIn)) {
+            Person person = (Person) in.readObject();
+            System.out.println("Deserialized Person object:");
+            System.out.println(person);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}

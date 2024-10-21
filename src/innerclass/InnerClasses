@@ -1,0 +1,77 @@
+ 
+ Inner class :
+  1)Nested class/ static Inner class
+  2)Member Inner class
+  3)Method local Inner class
+  4)Anonymous Inner Class
+  
+  1)Nested class / static Inner class : is able to access all static properties of outer class,non static properties are not accessible 
+  class Demo{
+  private int number;
+  private static String mgs; 
+     static class Test{
+     void show(){
+         //sop(number);//error
+         sop(msg);
+          }
+     }
+     
+     Demo.Test obj = new Demo.Test();//outerclass. Innerclass
+     
+  --------------------------------------------------------------------
+  2) Member Inner class: is able to access all the properites of outer class (Static/non-static both )
+    
+     class Demo{
+       private int number;
+       private static string msg;
+       class Test{
+       void show(){
+             sop(number);
+             sop(msg);
+       }
+   }  
+   
+   Demo demo = new Demo();
+   Test test = demo.new Test();  
+   
+   -------------------------------------------------------------------------------------
+   3)Method local Inner class :  is able to access all the properties of outer class (static / non static both)
+   It is local to that method in which you are declaring class, so you can't access it outside the method.
+   
+   class Demo{ 
+           private static int number;
+           private String msg;
+           
+           void show(){
+          int COUNT = 100; // needed to initialize local variable
+           class Test{
+              void display(){
+                  sop(number);
+                  sop(msg);
+                  sop(count);
+              }
+           }
+         
+       Test obj = new Test();
+       obj.display();
+       }
+       
+    }
+    
+    
+    --------------------------------------------------------------------------------------------------
+   4)Anonymous Inner Class : used in case of implementing interfaces or extending abstract classes.
+   
+   interface MyInterface {
+                void show();
+                
+       }
+       
+     class Demo{
+            psvm(){
+                     MyInterface obj = new MyInterface
+            
+   
+   
+   
+   

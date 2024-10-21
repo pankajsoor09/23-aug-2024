@@ -1,0 +1,15 @@
+create new phone book user interface like 
+
+1 add new phone book entry
+2 Search phone number
+3 quit
+
+option 1 it allows add name and phone no
+option 2 it has to take name as input from the user based on that it should return phone no
+option 3 will terminate the program
+
+use HashMap to store phone book entries
+
+
+
+

@@ -1,0 +1,62 @@
+wrapper classes : java.lang
+used to represent primitive as an object
+
+------------
+Byte
+Short           Numeric wrapper classes
+Integer
+Long
+Float
+Double
+--------------
+Character
+Boolean
+
+Constructors :
+primitive to wrapper object conversion : Boxing
+1 primitive : Byte (byte) ,Short(short)
+             Integer obj = new Integer(10);
+             Double obj1 = new Double (35.5);
+             
+2. String  : except Character : Integer (String),Long(String)
+             Byte obj = new Byte ("10");
+             Float obj1 = new Float("20.7");
+             Byte obj2 = Byte("10.8");//NumberFormatException
+             Integer obj3 = new Integer("abc");//NumberFormatException
+             
+Methods : 
+1. xxxValue(): byteValue(),shortValue(),intValue(),longValue(),floatValue(),doubleValue(),
+ To convert wrapper object into primitive : Unboxing
+ 
+ 2.Static WrapperObject valueOf(primitive) : Primitive to wrapper conversion : Boxing
+ 
+      Integer : public static Integer valueOf(int)
+      Double  : public static Double valueOf(double)
+      Byte    : public static Byte valueOf(byte)
+      
+    e.g short s = 20;
+        short obj = Short.valueOf(s);
+        
+3.static wrapperObject valueOf(String) : 
+
+      Integer : public static Integer valueOf(String)
+      Double  : public static Double valueOf(String)
+      Byte    : public static Byte valueOf(String)
+      
+    e.g  Short obj = Short.valueOf("20");
+    
+    
+    
+    
+    java 5 feature :
+    Auro Boxing and auto Unboxing
+    //before java 5 
+    Integer obj = new Integer(10);//Boixing
+    //After java 5
+    Integer obj =10;//Auto Boxing  
+    
+    
+    Collection : is a framework
+    
+    
+    

@@ -1,0 +1,27 @@
+java 7 Features 
+
+1 switch(String): String to switch case
+
+2 try- with - resource
+
+try(resource){ // must include auto closable resource// for passing resource to try block that resource must auto closable
+}
+
+3 Multiple exceptions in single try block with bitwise operator and related exception can not used together 
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Reflection : means Observing and modifying classes at run time // to observe class at run time
+class : java.lang
+
+To get the object of Class class : 
+1)getClass() of object class
+2) public static forName(String) : in Class class
+ 3) class property
+ 
+ In static only static can be access and in non static , static can be accessed , Static belong to class not instance
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
